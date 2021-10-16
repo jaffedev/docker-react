@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t jaffedev/docker-react -f Dockerfile.dev
+  - docker build -t jaffedev/docker-react -f Dockerfile.dev .
 
 script:
   - docker run -e CI=true jaffedev/docker-react npm run test
